@@ -1,6 +1,9 @@
 # Byte-compiled / optimized / DLL files
 
 /fake_job_postings.csv
+/FastText
+/language_processed_df.csv
+/SIF_Vectors.csv
 
 __pycache__/
 *.py[cod]
