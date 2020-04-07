@@ -3,7 +3,9 @@
 ## Data:
 Real-Fake Job Posting Classification (NLP) from Kaggle: https://www.kaggle.com/shivamb/real-or-fake-fake-jobposting-prediction
 
-I have been developing an NLP, multi-label classification model for a work-related project and thought I might practice and test my understanding by working through a binary classification model. This dataset is directly pulled from Kaggle (link above) and contains 17 880 job postings, of which, only 688 (~4.8%) are fraudulent. ![labels](/Images/label_dist.JPG)
+I have been developing an NLP, multi-label classification model for a work-related project and thought I might practice and test my understanding by working through a binary classification model. This dataset is directly pulled from Kaggle (link above) and contains 17 880 job postings, of which, only 688 (~4.8%) are fraudulent. 
+
+![labels](/Images/label_dist.JPG)
 
 ## Exploring the Data:
 To simplify my analysis, I divide the categorical features into two main categories:
