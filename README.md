@@ -12,9 +12,13 @@ To simplify my analysis, I divide the categorical features into two main categor
   1. Long unique descriptors: `company_profile`, `description`, `requirements`...
   2. Categorical indicators that are more receptive to one-hot-encoding (or are already binary): `has_questions`, `telecommuting`, `employment_type`...
   
-A cursory analysis of the categorical indicators reveals that most either have too many different categories (> 20 categories), or have too many missing values to have much predictive value. I decide that employment type (6 classes, 19% missing values) can be included: ![labels](/Images/employ_type_dist.JPG)
+A cursory analysis of the categorical indicators reveals that most either have too many different categories (> 20 categories), or have too many missing values to have much predictive value. I decide that employment type (6 classes, 19% missing values) can be included: 
 
-Intuitively, one might think salary information might be an indicator of fraud. `salary_range` however, has a wide range of rates and currencies. A binary variable of whether or not salary data is included might be more informative: ![labels](/Images/salary_dist.JPG)
+![labels](/Images/employ_type_dist.JPG)
+
+Intuitively, one might think salary information might be an indicator of fraud. `salary_range` however, has a wide range of rates and currencies. A binary variable of whether or not salary data is included might be more informative: 
+
+![labels](/Images/salary_dist.JPG)
 
 ## Basic Feature Engineering & Baseline Models:
 Before diving into NLP deep learning, I want to create a baseline model using existing categorical variables along with basic featuers I  extrapolate from the long unique descriptors. I decide to use `description`, the job description, as the main driver for new features. Simple numerical features I can extract from a description include: `num_nums` `num_punct` `description_length` and `num_links`
