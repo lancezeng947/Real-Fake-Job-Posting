@@ -43,7 +43,7 @@ A cursory analysis look at the top 15 words used in fraudulent vs. clean descrip
 My NLP deep learning models will consist of three stages:
   1. Models using condensed sentence embeddings
   2. Sequence LSTM/GRU architecture models using individual word embeddings
-  3. Blended models combining Sequence models with categorical features
+  3. Mixed data models combining Sequence models with non-sequential features
   
 **1.** To build a sentence embedding model, I first convert our descriptions into word embeddings. I choose to use gensim's preloaded FastText model `fasttext-wiki-news-subwords-300` With more time or resources I might decide to use the full FastText common crawl model, which can generate word embeddings for words outside of its vocabulary: https://fasttext.cc/docs/en/english-vectors.html. In our current situation, misspelled or unrecognized words will have an embedding vector of zeros. 
 
