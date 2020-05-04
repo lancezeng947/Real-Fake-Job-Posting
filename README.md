@@ -57,9 +57,9 @@ I use these 300x1 as input features into our three (log, RF, XGB, 2-layer MLP) m
 ![labels](/Images/SIF_MLP.JPG)
 
 
-Using sentence embeddings, the random forest classifier performed the best: 95% AUC. Unfortunately, the recall @ 45% is a bit low (ie. we are capaturing less than half the fake jobs posts)
+Usg sentence embeddings, the random forest classifier performed the best: 95% AUC. Unfortunately, the recall @ 45% is a bit low (ie. we are capaturing less than half the fake jobs posts)
 
-**2.** Sentence embedding performed admirably, but by condensing an order-dependent sequence of words into a single representation, lots of information gets lost. The LSTM/GRU model will incorporate word embeddings as individual features and also extract contextual information from the order of words. Inspiartion for my code came from MLWhiz: https://mlwhiz.com/blog/2019/03/09/deeplearning_architectures_text_classification/
+**2.** Sentence embedding performed admirably, but by condensing an order-dependent sequence of words into a single representation, lots of information gets lost. The LSTM/GRU model will incorporate word embeddings as individual features and also extract contextual information from the order of words. Inspiration for my code came from MLWhiz: https://mlwhiz.com/blog/2019/03/09/deeplearning_architectures_text_classification/
 
 The architecture of this model consists of an embedding layer (using pretrained FastText weights as starting points), followed by a bidirectional LSTM. We will pool results together to streamline the training process before outputing a sigmoid probability of whether or not the job posting is fake. The result outperforms all other models so far:
 ![labels](/Images/LSTM_CM.JPG)
