@@ -37,7 +37,7 @@ To prepare unstructured text for deep learning methods. I apply several preproce
   3. translating foreign descriptions (using `langdetect` & `googletrans` packages)
   4. to reduce the feature space, I lemmatize words (ie. children --> child). I use `SpaCy` lemmatizer after tagging words with their POS. 
 
-A cursory analysis look at the top 15 words used in fraudulent vs. clean descriptors, indicate relative similarity, with 11 words overlapping. A quick look at the lexical diversity of the descriptions also indicates relatively little difference (for more information on lexical diversity: https://pypi.org/project/lexical-diversity/. Nonetheless, let's see if deep learning algorithms can give us a little more insight. 
+A cursory analysis look at the top 15 words used in fraudulent vs. clean descriptors, indicate relative similarity, with 11 words overlapping. A quick look at the lexical diversity of the descriptions also indicates relatively little difference (for more information on lexical diversity: https://pypi.org/project/lexical-diversity/. Nonetheless, let's see if deep learning algorithms can give us a little more insight. ![wordDistribution](/Images/word_dist.JPG)
 
 ## Deep Learning NLP:
 My NLP deep learning models will consist of three stages:
