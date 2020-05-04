@@ -23,7 +23,7 @@ Intuitively, one might think salary information might be an indicator of fraud. 
 ## Basic Feature Engineering & Baseline Models:
 Before diving into NLP deep learning, I want to create a baseline model using existing categorical variables along with basic featuers I  extrapolate from the long unique descriptors. I decide to use `description`, the job description, as the main driver for new features. Simple numerical features I can extract from a description include: `num_nums` `num_punct` `description_length` and `num_links`
 
-The dataset is an imbalanced dataset. To correct for this, I give fraudulent posts higher improtance in my three baseline models (logistic, random forest, XGBoost): ![labels](/Images/Baseline_metrics.JPG)
+The dataset is an imbalanced dataset. To correct for this, I give fraudulent posts higher importance in my three baseline models (logistic, random forest, XGBoost): ![labels](/Images/Baseline_metrics.JPG)
 
 
 I use ROC AUC as the target performance metric. In the case of fraud detection, it can be argued either way on whether you want better **precision** (jobs flagged are actually fraudulent) or better **recall** (accurately flag all fraudulent jobs postings). As a potential job site, hosting these job postings, you do not want to frustrate the employers by suggesting their job post is fake, but at the same time you do not want your customers wasting their time applying to fake jobs. The ROC AUC metric will measure the performance of the overall balance between these two metrics.   
